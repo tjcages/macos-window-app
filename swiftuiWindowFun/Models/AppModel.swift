@@ -100,7 +100,6 @@ class AppModel: ObservableObject {
     static func titleFromUrl(_ url: URL) -> String? {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         if let queryItems = components?.queryItems {
-//            print("qu = \(queryItems)")
             let title: String? = queryItems.first(where: { $0.name == AppConfig.UrlTitleQuerryItemKey })?.value
             if let title = title {
                 return title

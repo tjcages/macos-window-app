@@ -14,7 +14,6 @@ struct PermanentPureView: View {
     let singleton: NSWindow?
     let genericWins: Set<NSWindow>
     
-    
     var body: some View {
         VStack {
             Text("Hello from the app's main permanent window")

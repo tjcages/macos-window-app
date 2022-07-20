@@ -12,12 +12,17 @@ import SwiftUI
 
     struct HostingWindowFinder: NSViewRepresentable {
         let callback: (NSWindow?) -> Void
+        let appModel = AppModel.shared
 
         func makeNSView(context: Self.Context) -> NSView {
             let view = NSView()
 
             DispatchQueue.main.async { [weak view] in
-
+                
+                view?.window?.titlebarAppearsTransparent = true
+                view?.window?.backgroundColor = .clear
+                view?.window?.title = ""
+                
                 self.callback(view?.window)
             }
             return view

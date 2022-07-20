@@ -22,8 +22,6 @@ struct AppConfig {
     static let NewGenericWindow = KeyboardShortcut("2", modifiers: .command)
     static let WindowClose = KeyboardShortcut("W", modifiers: .command)
 
-    
-    
     /// Set up a list of names to give to generic windows and tabs to make them a bit easier to distinguish and show how the URL routing and decoding works
     static let TestWindowNamesForTabsAndGenericWindows: Array<String> = [
         "Kirk", "Checkov", "McCoy", "Scotty", "Spock", "Sulu", "Uhura", "Pike", "Away Team Dude",
